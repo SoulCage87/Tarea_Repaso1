@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavBarHook } from '../Hooks/NavBarHook';
 import '../Components/NavBar.css'
 

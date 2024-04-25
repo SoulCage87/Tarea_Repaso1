@@ -12,7 +12,6 @@ useEffect(() => {
       const result = await axios.get(`https://reqres.in/api/users/2`);
       const resultData = (await result).data
       setData(resultData.data);
-      console.log(data)
     } catch (error) {
       console.error('Error al obtener resultados: ', error);
     }
