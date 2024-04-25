@@ -1,22 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 export const NavBarHook = () => {
 
-const [data, setData] = useState([]);
+const [data, setData] = useState({});
 
-const loadUser = async () => {
-    const result = await axios.get(`https://reqres.in/api/users/3`)
-    const resultData = (await result).data
-    setData(resultData.data);
-}
 
+useEffect(() => {
+  const loadUser = async () => {
+    try {
+      const result = await axios.get(`https://reqres.in/api/users/2`);
+      const resultData = (await result).data
+      setData(resultData.data);
+      console.log(data)
+    } catch (error) {
+      console.error('Error al obtener resultados: ', error);
+    }
+  };
+
+  loadUser(); 
+}, []);
 
   return {
 
-    data,
-    loadUser
+    data
 
   }
     
 }
+

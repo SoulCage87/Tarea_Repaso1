@@ -2,7 +2,7 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { NavBar } from './Components/NavBar'
+import {Home} from './ComponentsScreen/Home'
 function App() {
  
 
@@ -10,7 +10,7 @@ function App() {
     <>
      <BrowserRouter>
      <Routes>
-      <Route path='/' element={<NavBar />} />
+      <Route path='/' element={<Home/>} />
      </Routes>
      </BrowserRouter>
     </>

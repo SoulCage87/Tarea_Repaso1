@@ -1,0 +1,11 @@
+.navbar-brand{
+    font-style: italic;
+    color: black;
+}
+
+.navbar{
+    background-color: #e3f2fd;
+}
+img {
+    border-radius: 15px;
+}
